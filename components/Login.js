@@ -4,9 +4,12 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../reducers/user';
+import { useRouter } from 'next/router';
 
 function Login() {
   const dispatch = useDispatch();
+  const router = useRouter();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
   const openModal = () => {
@@ -40,7 +43,7 @@ function Login() {
           setSignUpFirstname('');
 					setSignUpUsername('');
 					setSignUpPassword('');
-				}
+				} router.push('/')
 			});
 	};
 
@@ -56,7 +59,7 @@ function Login() {
                 dispatch(login({username: signInUsername, token: data.token})); 
                 setSignInUsername('');
                 setSignInPassword('');
-            }
+            }router.push('/')
         });
 };
 

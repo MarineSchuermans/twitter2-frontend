@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr; 
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   background-color: #151F2B;
   color: white;
   letter-spacing: 2px;
@@ -19,14 +19,11 @@
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:flex-start;
   background-color:#151F2B;
-  /* background-image: url('../public/back-login.png');  */
   background-size:contain;
   color: white;
   letter-spacing: 2px;
