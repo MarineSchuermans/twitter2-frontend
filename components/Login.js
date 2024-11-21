@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../reducers/user';
 
 function Login() {
+  const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
   const openModal = () => {
