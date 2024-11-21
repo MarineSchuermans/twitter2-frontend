@@ -1,7 +1,7 @@
-import Trends from '../components/Trends';
+import Hashtags from '../components/Hashtags';
 
-function TrendsPage() {
-  return <Trends />;
+function HashtagsPage() {
+  return <Hashtags />;
 }
 
-export default TrendsPage;
+export default HashtagsPage;
