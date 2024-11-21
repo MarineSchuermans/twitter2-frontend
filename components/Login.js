@@ -10,6 +10,7 @@ function Login() {
   const dispatch = useDispatch();
   const router = useRouter();
 
+  const [signInError, setSignInError] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
   const openModal = () => {
@@ -59,7 +60,10 @@ function Login() {
                 dispatch(login({username: signInUsername, token: data.token})); 
                 setSignInUsername('');
                 setSignInPassword('');
-            }router.push('/')
+                router.push('/')
+            } else {
+              setSignInError('Invalid username or password');
+          }
         });
 };
 
@@ -82,6 +86,7 @@ function Login() {
       <h2 className={styles.h22}>Connect to Hackatweet</h2>
       <input type="text" placeholder="Username" className={styles.input2} onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
       <input type="password" placeholder="Password" className={styles.input2} onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword}/>
+      {signInError && <p className={styles.errorMessage}>{signInError}</p>}
       <button className={styles.modalSignup} onClick={() => handleConnection()}>Sign in</button>
     </div>
   </div>)
