@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Tweet from './Tweet'
 import LastTweet from './LastTweets';
+import Trends from './Trends';
 
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -43,10 +44,8 @@ function Home() {
     <hr/>
 
     <div className={styles.right}>
-      <h2> Trends </h2>
-      <p> #newtrend </p>
-      <p> #lacapsule</p>
-      <p> #lospolloshermanos</p>
+
+      <Trends />
     </div>
 
   </div>
