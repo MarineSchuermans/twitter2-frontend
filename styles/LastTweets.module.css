@@ -1,0 +1,11 @@
+.userInfos {
+    display: flex;
+    align-items: center;
+
+    /* justify-content: space-between; */
+}
+
+.icone {
+    padding-left: 20px;
+}
+

@@ -1,0 +1,42 @@
+.tweet {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.home {
+    text-align: left;
+}
+
+.writeTweet {
+    background-color: #151526;
+    color: white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-size: 15px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.countAndBtn {
+    display: flex;
+    justify-content: right;
+    margin-right: 10%;
+    align-items: center;
+    
+}
+
+.counter {
+    font-size: 12px;
+}
+
+.btnTweet {
+    height: 15%;
+    width: 10%;
+    border-radius: 10px;
+    background-color: #2392fa;
+    color: #ffff;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
