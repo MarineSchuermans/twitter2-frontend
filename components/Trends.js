@@ -3,11 +3,22 @@ import styles from '../styles/Trends.module.css'
 function Trends () {
 
     return (
-        <div>
-        <h2> Trends </h2>
-        <p> #newtrend </p>
-        <p> #lacapsule</p>
-        <p> #lospolloshermanos</p>
+        <div className={styles.trends}>
+        <h2 className={styles.title}> Trends </h2>
+        <div className={styles.hashtags}> 
+            <div className={styles.bloc}>
+                <p className={styles.text}> #lospolloshermanos</p>
+                <p className={styles.counterHash}>hashtags.length Tweets</p>
+            </div>
+            <div className={styles.bloc}>
+                <p className={styles.text}> #lospolloshermanos</p>
+                <p className={styles.counterHash}>hashtags.length Tweets</p>
+            </div>
+            <div className={styles.bloc}>
+                <p className={styles.text}> #lospolloshermanos</p>
+                <p className={styles.counterHash}>hashtags.length Tweets</p>
+            </div>
+        </div>
         </div>
     )
 }

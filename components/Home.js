@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Tweet from './Tweet'
 import LastTweet from './LastTweets';
 import Trends from './Trends';
+import Hashtags from './Hashtags';
 
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
