@@ -1,10 +1,12 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
+  background-color: #151526 ;
+  color : #ffffff
 }
 
 .title {
@@ -19,4 +21,58 @@
 
 .title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 25vw;
+  align-items: left;
+}
+
+.logoTwitter {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.twitter{
+  height: 20%;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: left;
+  align-items: stretch;
+  margin-bottom: 30px;
+  margin-left: 50px;
+
+}
+
+.userLogo{
+  align-items: center;
+
+}
+
+.userImg{
+  display: flex;
+  height: 50%;
+  align-items: flex-end;
+  margin-top: 25%;
+  margin-bottom: 50%;
+  margin-right: 20px;
+}
+
+.middle {
+  width: 50vw;
+  text-align: center;
+  
+
+}
+
+.right {
+  width: 25vw;
+
+
 }
