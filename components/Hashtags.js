@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useSelector } from 'react-redux';
 import Home from './Home';
 
-function Trends() {
+function Hashtags() {
   const trends = useSelector((state) => state.trends);
 
   return (
@@ -26,4 +26,4 @@ function Trends() {
   );
 }
 
-export default Trends;
+export default Hashtags;
