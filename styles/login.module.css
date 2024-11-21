@@ -105,9 +105,9 @@
 
 .modal {
   background-color: #151F2B;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   border-radius: 10px;
-  width: 300px;
+  width: 400px;
 }
 
 .modal h2 {
@@ -120,18 +120,23 @@
   background-color: white;
   color: #151F2B;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 }
 
 .closeModal {
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
   margin-top: 10px;
-  background-color: #e0e0e0;
+  background-color: transparent;
+  font-size: 16px;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .input2{
@@ -141,4 +146,14 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: transparent;
+}
+
+.logo2{
+  width: 100%;
+  padding: 10px;
+  font-size: 60px;
+}
+
+.h22{
+ text-align: center;
 }

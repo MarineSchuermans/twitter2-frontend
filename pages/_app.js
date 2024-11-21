@@ -51,7 +51,6 @@ function App({ Component, pageProps }) {
       <Head>
         <title>Twitter</title>
       </Head>
-      <Login />
       <Component {...pageProps} />
       </PersistGate>
     </Provider>
