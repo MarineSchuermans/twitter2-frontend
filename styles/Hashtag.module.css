@@ -1,10 +1,6 @@
 .main {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
   min-height: 100vh;
-  /* padding: 4rem 0; */
   background-color: #151526 ;
   color : #ffff;
 }
@@ -73,4 +69,61 @@
 
 .right {
   width: 25vw;
+}
+
+.lastTweet {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.userInfos2 {
+    display: flex;
+    align-items: center;
+
+    /* justify-content: space-between; */
+}
+
+.icone {
+   
+    padding-right: 10px;
+}
+
+.typo {
+    display: flex;
+    font-size: 11px;
+    align-items: center;
+    
+}
+
+.name {
+    padding-right: 2px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.infos {
+    padding-right: 5px;
+    color: #858383;
+}
+
+.text {
+    font-size: 13px;
+    margin: 0;
+}
+
+.likes{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.heart {
+    height: 12px;
+    padding-right: 5px;
+}
+
+
+.counter{
+    margin:0;
+    font-size: 10px;
 }
