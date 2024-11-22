@@ -57,7 +57,7 @@
 
 .userImg{
   display: flex;
-  height: 50%;
+  font-size: 50px;
   align-items: flex-end;
   margin-top: 25%;
   margin-bottom: 50%;
