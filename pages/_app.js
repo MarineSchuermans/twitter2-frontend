@@ -49,10 +49,10 @@ function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-      <Head>
-        <title>Twitter</title>
-      </Head>
-      <Component {...pageProps} />
+          <Head>
+            <title>Twitter</title>
+          </Head>
+          <Component {...pageProps} />
       </PersistGate>
     </Provider>
   );

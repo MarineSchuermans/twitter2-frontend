@@ -99,8 +99,7 @@ function LastTweet(props) {
     }, [value])
     
 
-
-
+console.log(allTweets)
 
 
 
