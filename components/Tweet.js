@@ -15,17 +15,20 @@ function Tweet () {
     console.log(tweet)
 
     const publishNewTweet = () => {
-        fetch('http://localhost:3000/tweet', {
-            method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: user.token }),
-        }).then(response => response.json())
-            .then(data => {
-                if (data.result && count > 0){
-                    console.log('Gogogo')
-                    // dispatch(tweet({}))
-                }
-            })
+        if (count > 0){
+            fetch('http://localhost:3000/tweet', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: user.token, content: tweet}),
+            }).then(response => response.json())
+                .then(data => {
+                    if (data.result){
+                        console.log('Tweet published')
+                    } else {
+                        console.log('Try Again')
+                    }
+                })
+        }
     }
 
    
