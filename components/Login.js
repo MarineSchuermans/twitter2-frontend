@@ -40,7 +40,7 @@ function Login() {
 		}).then(response => response.json())
 			.then(data => {
 				if (data.result) {
-					dispatch(login({firstname: signUpFirstname, username: signUpUsername, token: data.token}));
+					dispatch(login({_id: data.info._id, firstname: signUpFirstname, username: signUpUsername, token: data.token}));
           setSignUpFirstname('');
 					setSignUpUsername('');
 					setSignUpPassword('');
@@ -57,7 +57,7 @@ function Login() {
         .then(data => {
 					console.log(data)
             if (data.result) {
-                dispatch(login({username: signInUsername, firstname: data.info.firstname, token: data.info.token})); 
+                dispatch(login({_id: data.info.id, username: signInUsername, firstname: data.info.firstname, token: data.info.token})); 
                 setSignInUsername('');
                 setSignInPassword('');
                 router.push('/')
