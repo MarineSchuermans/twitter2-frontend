@@ -8,6 +8,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import user from '../reducers/user';
+import tweet from '../reducers/tweet'
 
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 const createNoopStorage = () => {
@@ -26,7 +27,7 @@ const createNoopStorage = () => {
 const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage();
 
 const rootReducer = combineReducers({
-  user
+  user, tweet
 });
 
 const persistConfig = {

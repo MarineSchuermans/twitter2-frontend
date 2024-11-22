@@ -1,14 +1,16 @@
 import styles from '../styles/Tweet.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { tweet } from '../reducers/tweet'
+import { addNewTweet } from '../reducers/tweet'
 
 function Tweet () {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user.value)
 
+    
 
-    // console.log(user)
+
+    console.log(user)
 
     const [count, setCounter] = useState (0)
     const [tweet, setTweet] = useState ('')
@@ -23,6 +25,7 @@ function Tweet () {
             }).then(response => response.json())
                 .then(data => {
                     if (data.result){
+                        dispatch(addNewTweet())
                         console.log('Tweet published')
                     } else {
                         console.log('Try Again')
@@ -30,6 +33,8 @@ function Tweet () {
                 })
         }
     }
+
+
 
    
 
