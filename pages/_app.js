@@ -9,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import user from '../reducers/user';
 
+
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 const createNoopStorage = () => {
     return {
@@ -26,7 +27,7 @@ const createNoopStorage = () => {
 const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage();
 
 const rootReducer = combineReducers({
-  user
+  user,
 });
 
 const persistConfig = {
@@ -48,10 +49,10 @@ function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-      <Head>
-        <title>Twitter</title>
-      </Head>
-      <Component {...pageProps} />
+          <Head>
+            <title>Twitter</title>
+          </Head>
+          <Component {...pageProps} />
       </PersistGate>
     </Provider>
   );

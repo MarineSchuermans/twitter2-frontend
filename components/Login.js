@@ -2,8 +2,8 @@ import styles from '../styles/login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { login, logout } from '../reducers/user';
+import { useDispatch } from 'react-redux';
+import { login } from '../reducers/user';
 import { useRouter } from 'next/router';
 
 function Login() {
