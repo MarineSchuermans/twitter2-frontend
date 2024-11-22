@@ -4,6 +4,8 @@ import Tweet from './Tweet'
 import LastTweet from './LastTweets';
 import Trends from './Trends';
 import Hashtags from './Hashtags';
+import { useDispatch, useSelector } from 'react-redux';
+import {login, logout} from '../reducers/user'
 
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,6 +16,11 @@ import { faTwitter} from '@fortawesome/free-brands-svg-icons'
 
 
 function Home() {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.value);
+
+  console.log(user.firstname)
+
   return (
   <div className = {styles.main}>
     
@@ -26,8 +33,8 @@ function Home() {
           <FontAwesomeIcon icon={faUser} style={{color: "#ffffff",}} className={styles.userImg} />
           </div>
             <div> 
-                <p>Pseudo</p>
-                <p>@username</p>
+                <p>{user.firstname}</p>
+                <p>@{user.username}</p>
                 <button type='button'>Logout</button>
             </div>
         </div>
