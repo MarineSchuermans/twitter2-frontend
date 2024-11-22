@@ -6,6 +6,7 @@ import Trends from './Trends';
 import Hashtags from './Hashtags';
 import { useDispatch, useSelector } from 'react-redux';
 import {login, logout} from '../reducers/user'
+import Link from 'next/link';
 
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,10 +20,16 @@ function Home() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
 
-  console.log(user.firstname)
+console.log(user.username)
+
+  const handleLogout = () => {
+    dispatch(logout())
+    return 
+  }
 
   return (
   <div className = {styles.main}>
+
     
       <div className={styles.left}>
         <div className={styles.logoTwitter}>
@@ -35,7 +42,7 @@ function Home() {
             <div> 
                 <p>{user.firstname}</p>
                 <p>@{user.username}</p>
-                <button type='button'>Logout</button>
+                <Link href='/login'><button onClick={() => handleLogout ()} type='button'>Logout</button></Link>
             </div>
         </div>
       </div> 
