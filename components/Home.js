@@ -24,7 +24,13 @@ console.log(user.username)
 
   <div className={styles.left}>
     <div className={styles.logoTwitter}>
-    <FontAwesomeIcon icon={faTwitter} rotation={180} style={{color: "#ffffff",}} className={styles.twitter} />
+    <Link href='/'>
+          <FontAwesomeIcon
+            icon={faTwitter}
+            rotation={180}
+            style={{ color: '#ffffff' }}
+            className={styles.twitter}
+          /></Link>
     </div>
     <div className={styles.userInfo}>
       <div className={styles.userLogo}>

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import { login, logout } from '../reducers/user';
+import { logout } from '../reducers/user';
 import styles from '../styles/Hashtag.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -51,13 +51,13 @@ function Hashtag() {
   return (
     <div className={styles.main}>
       <div className={styles.left}>
-        <div className={styles.logoTwitter}>
+        <div className={styles.logoTwitter}><Link href='/'>
           <FontAwesomeIcon
             icon={faTwitter}
             rotation={180}
             style={{ color: '#ffffff' }}
             className={styles.twitter}
-          />
+          /></Link>
         </div>
         <div className={styles.userInfo}>
           <div className={styles.userLogo}>
